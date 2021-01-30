@@ -64,6 +64,8 @@ export class AppComponent implements OnInit {
     this.barChartData[0].backgroundColor = this.color;
   }
 
+  // something
+
   OrderOfN2TimeComplexity() {
     this.changeType = 'n2';
     this.color = '#EB4D4B';
