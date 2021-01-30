@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+      >
+      </canvas>
+    </div>
+  </div>
+  <div class="row justify-content-center my-2">
+    <div class="col-md-6 col-12 my-2">
+      <div class="card" style="width: 100%; margin: '0px'">
+        <div class="card-header text-center">Choose Your Option</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <button
+              class="btn btn-danger btn-block"
+              (click)="OrderOfN2TimeComplexity()"
+            >
+              O(n2)
+            </button>
+          </li>
+          <li class="list-group-item">
+            <button
+              class="btn btn-info btn-block"
+              (click)="OrderOfNTimeComplexity()"
+            >
+              O(n)
+            </button>
+          </li>
+          <li class="list-group-item">
+            <button
+              class="btn btn-secondary btn-block"
+              (click)="OrderOfLogNComplexity()"
+            >
+              O(log n)
+            </button>
+          </li>
+          <li class="list-group-item">
+            <button
+              class="btn btn-warning btn-block"
+              (click)="OrderOfNLogNComplexity()"
+            >
+              O(nlog n)
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 mt-2">
+      <div class="card" style="width: 100%; margin: '0px'">
+        <div class="card-header text-center">{{ time_complexity }}</div>
+        <div class="form-group m-4">
+          <label for="exampleInputEmail1">Number of input </label>
+          <input
+            type="number"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            [(ngModel)]="noOfInput"
+            (input)="onChangeInput()"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row card shadow p-3 justify-content-center m-0">
+    <div class="container justify-content-center m-0">
+      <div class="col-8 mr-0">
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <button
+              class="btn btn-primary btn-block"
+              (click)="OrderOfNTimeComplexity()"
+            >
+              O(n)
+            </button>
+          </div>
+          <div class="col-4">
+            <button
+              class="btn btn-primary btn-block"
+              (click)="OrderOfNTimeComplexity()"
+            >
+              O(log n)
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <button
+              class="btn btn-primary btn-block"
+              (click)="OrderOfNTimeComplexity()"
+            >
+              O(1)
+            </button>
+          </div>
+          <div class="col-4">
+            <button
+              class="btn btn-primary btn-block"
+              (click)="OrderOfNTimeComplexity()"
+            >
+              O(nlogn)
+            </button>
+          </div>
+          <div class="col-4">
+            <button
+              class="btn btn-primary btn-block"
+              (click)="OrderOfNTimeComplexity()"
+            >
+              O(log n3)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
